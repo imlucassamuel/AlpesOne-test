@@ -15,32 +15,10 @@ import "./Header.scss";
 
 function Header() {
   const [isButtonListClicked, setIsButtonListClicked] = useState(false);
-
-  const [scrollX, setScrollX] = useState(0);
-
   function handleListCars() {
     isButtonListClicked === false
       ? setIsButtonListClicked(true)
       : setIsButtonListClicked(false);
-  }
-
-  function handleLeftArrow() {
-    let sliderLeft = scrollX + Math.round(window.innerWidth / 2);
-
-    if (sliderLeft > 0) {
-      sliderLeft = 0;
-    }
-
-    setScrollX(sliderLeft);
-  }
-
-  function handleRightArrow() {
-    let sliderRight = scrollX - Math.round(window.innerWidth / 2);
-    let listWidth = carsList.length * 150;
-    if (window.innerWidth - listWidth > sliderRight) {
-      sliderRight = window.innerWidth - listWidth - 60;
-    }
-    setScrollX(sliderRight);
   }
 
   return (
@@ -112,11 +90,11 @@ function Header() {
 
           {isButtonListClicked && isButtonListClicked !== false ? (
             <>
-              <div className="arrow-left" onClick={handleLeftArrow}>
+              <div className="arrow-left" >
                 <img src={arrowLeft} alt="seta-esquerda" />
               </div>
 
-              <div className="arrow-right" onClick={handleRightArrow}>
+              <div className="arrow-right" >
                 <img src={arrowRight} alt="seta-direita" />
               </div>
               
