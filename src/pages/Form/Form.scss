@@ -1,0 +1,43 @@
+@import "../../styles/global";
+
+form {
+  .form-content {
+    margin: 1rem;
+    padding: 10px;
+
+    .form-title {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      h2 {
+        font-weight: 400;
+      }
+
+      img {
+        width: 4rem;
+        padding-right: 15px;
+      }
+    }
+
+    input {
+      width: 100%;
+      border-bottom: solid 1px $medium-gray;
+      padding: 10px 0 2px 0;
+    }
+  }
+
+  .policy-therms {
+    margin-top: 1rem;
+    text-align: center;
+
+    label {
+      padding-left: 10px;
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+}
